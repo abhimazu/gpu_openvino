@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  gpu_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gpu_app
+    privileged: true
+    network_mode: host
+    devices:
+      - /dev/dri
